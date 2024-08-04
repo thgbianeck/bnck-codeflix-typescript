@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Navegar para o diretório da aplicação e instalar dependências
 cd /home/node/app/bnck-admin-catalogo-ts || { echo "Diretório não encontrado"; exit 1; }
 
 if ! npm install; then
