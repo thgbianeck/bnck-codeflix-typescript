@@ -26,6 +26,8 @@
     "vscode": {
       "extensions": [
         "orta.vscode-jest",
+        "firsttris.vscode-jest-runner",
+        "andys8.jest-snippets",
         "tabnine.tabnine-vscode",
         "xyz.local-history",
         "esbenp.prettier-vscode",
