@@ -1,1 +1,1 @@
-# bnck-codeflix-typescript
+# bnck-admin-catalogo-ts
