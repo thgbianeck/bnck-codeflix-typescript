@@ -1,8 +1,12 @@
 services:
   app:
-    build: .
-    command: /bin/bash ./.docker/start.sh
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: bnck-codeflix-typescript:latest
+    container_name: bnck-codeflix-typescript
     ports:
-      - 3000:3000
+      - "3000:3000"
     volumes:
-      - .:/home/node/app
+      - .:/app
+      - /app/node_modules

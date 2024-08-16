@@ -4,10 +4,17 @@
   "service": "app",
   "workspaceFolder": "/home/node/app",
   "features": {
-    "ghcr.io/devcontainers/features/common-utils:2": {},
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "installZsh": true,
+      "configureZshAsDefaultShell": true,
+      "installOhMyZsh": true,
+      "installOhMyZshConfig": true,
+      "upgradePackages": true
+    },
     "ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {
-      "plugins": "git git-flow F-Sy-H zsh-autosuggestions zsh-completions",
-      "omzPlugins": "https://github.com/z-shell/F-Sy-H https://github.com/zsh-users/zsh-autosuggestions https://github.com/zsh-users/zsh-completions"
+      "plugins": "ssh-agent npm",
+      "omzPlugins": "https://github.com/zsh-users/zsh-autosuggestions",
+      "username": "node"
     },
     "ghcr.io/stuartleeks/dev-container-features/shell-history:0": {}
   },
@@ -34,6 +41,13 @@
         "editorconfig.editorconfig"
       ],
       "settings": {
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "terminal.integrated.shell.linux": "/bin/zsh",
+        "terminal.integrated.profiles.linux": {
+          "zsh": {
+            "path": "/bin/zsh"
+          }
+        },
         "editor.formatOnSave": true,
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.codeActionsOnSave": {
@@ -41,5 +55,6 @@
         }
       }
     }
-  }
+  },
+  "remoteUser": "node"
 }
