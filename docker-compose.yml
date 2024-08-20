@@ -9,4 +9,7 @@ services:
       - "3000:3000"
     volumes:
       - .:/app
-      - /app/node_modules
+      - bnck-codeflix-ts-node_modules:/app/node_modules
+
+volumes:
+  bnck-codeflix-ts-node_modules:
